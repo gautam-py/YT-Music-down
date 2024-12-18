@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return "hello world"
+    return jsonify(message="Hello, world!")
 
 @app.route('/search', methods=['GET'])
 def search_video():
