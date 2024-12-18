@@ -3,6 +3,10 @@ import yt_dlp
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index():
+    return "hello world"
+
 @app.route('/search', methods=['GET'])
 def search_video():
     query = request.args.get('query', '')
